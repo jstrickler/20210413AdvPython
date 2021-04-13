@@ -5,7 +5,8 @@ import calendar
 import webbrowser
 
 hcal = calendar.HTMLCalendar()  # <1>
-formatted_month = hcal.formatmonth(2012, 1)  # <2>
+formatted_month = hcal.formatmonth(2021, 4)  # <2>
+print(formatted_month)
 
 html_file_name = 'sample_calendar.html'
 

@@ -16,5 +16,5 @@ if __name__ == '__main__':
     for first, last in pairs:
         fwd = first.strftime("%A")  # <.>
         lwd = last.strftime("%A")  # <.>
-        print("{} {:9s} {} {:9s}".format(first, fwd, last, lwd))
+        print("{:10s} {} {:9s} {} {:9s}".format(first.strftime("%B"), first, fwd, last, lwd))
     print()
