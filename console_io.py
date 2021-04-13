@@ -20,7 +20,8 @@ print(z, m, sep='+')
 
 print("Look out!", file=sys.stderr)
 
-print("Look out!", file=sys.stdout, sep=' ', end='\n')
+print("Look out!", file=sys.stdout, sep=' ', end='\n', flush=False)
+
 
 
 
