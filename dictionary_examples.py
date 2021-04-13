@@ -31,15 +31,26 @@ print()
 # immutable
 # everything else (str, int, float, bytes, tuple, bool, ...)
 
-class Thing:
-    def __setitem__(self, key, value):
-        pass
+# class Thing:
+#     def __setitem__(self, key, value):
+#         pass
+#
+#     def __getitem__(self):
+#         pass
+#
+#     def __hash__(self):  # can be dict key
+#         pass
 
-    def __getitem__(self):
-        pass
+foo = {
+    'm': 5,
+    'a': 9,
+    'z': 4,
+    't': 3,
+}
 
-    def __hash__(self):  # can be dict key
-        pass
+for letter, number in foo.items():
+    print(letter, number)
+print()
 
 
 
