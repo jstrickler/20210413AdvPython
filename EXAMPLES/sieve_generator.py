@@ -8,9 +8,14 @@ def next_prime(limit):
             continue
         for j in range(2 * i, limit + 1, i):
             flags.add(j)  # <2>
-        yield i  # <3>
+        yield i  # <3>  # get next value
 
 
 np = next_prime(200)  # <4>
-for prime in np:  # <5>
+# for i in range(5):
+#     print(next(np))
+# print(next(np))
+
+for prime in np:  # <5>   # next(np) -> np.__next__()
     print(prime, end=' ')
+print()

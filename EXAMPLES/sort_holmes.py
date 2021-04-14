@@ -10,6 +10,8 @@ books = [
     "The Return of Sherlock Holmes",
     "His Last Bow",
     "The Case-Book of Sherlock Holmes",
+    "An apple a day",
+    "there is something weird",
 ]
 
 
