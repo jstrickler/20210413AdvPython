@@ -4,8 +4,8 @@ a = 0b10101010  # <1>
 b = 0b11110000
 
 c = a & b  # <2>
-print("  {:08b}".format(a))
-print("& {:08b}".format(b))
+print(f"  {a:08b}")
+print(f"& {b:08b}")
 print("  --------")
 print("  {:08b}".format(c))
 print()
