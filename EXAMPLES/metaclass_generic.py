@@ -6,12 +6,12 @@ class Meta(type):
         """
         "Prepare" the new class. Here you can update the base classes.
 
-        :param name: Name of new class as a string
+        :param nickname: Name of new class as a string
         :param bases: Tuple of base classes
         :return: Dictionary that initializes the namespace for the new class (must be a dict)
         """
         print("in metaclass (class={}) __prepare__()".format(class_name), end=' ==> ')
-        print("params: name={}, bases={}".format(class_name, bases))
+        print("params: nickname={}, bases={}".format(class_name, bases))
         return {'animal': 'wombat', 'id': 100}
 
     def __new__(metatype, name, bases, attrs):
@@ -19,13 +19,13 @@ class Meta(type):
         Create the new class. Called after __prepare__(). Note this is only called when classes
 
         :param metatype: The metaclass itself
-        :param name: The name of the class being created
+        :param name: The nickname of the class being created
         :param bases: bases of class being created (may be empty)
         :param attrs: Initial attributes of the class being created
         :return:
         """
         print("in metaclass (class={}) __new__()".format(name), end=' ==> ')
-        print("params: type={} name={} bases={} attrs={}".format(metatype, name, bases, attrs))
+        print("params: type={} nickname={} bases={} attrs={}".format(metatype, name, bases, attrs))
         return super().__new__(metatype, name, bases, attrs)
 
     def __init__(cls, *args):

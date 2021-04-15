@@ -14,7 +14,7 @@ myconn = pymysql.connect(
 # c = myconn.cursor(pymysql.cursors.DictCursor)
 c = myconn.cursor()
 
-# select first name, last name from all presidents
+# select first nickname, last nickname from all presidents
 num_recs = c.execute('''
     select lastname, firstname
     from presidents

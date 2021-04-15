@@ -15,7 +15,7 @@ decorators applied to functions:
 
 #TODO: straighten this mess out
 decorators applied to classes:
-    (NOTE: replacement class is frequently the original class, but doesn't have to be)
+    (NOTE: replacement class is usually the original class, but doesn't have to be)
     5. decorator function without args @deco_func
         decorator returns replacement class
     6. decorator function with args @deco_func(arg, ...)
@@ -193,7 +193,7 @@ def target_function(color, value):
     :return: None
     """
     print(("Hello from target_function -- color is {} and value is {}".format(color, value)))
-    print(("Target function's name is", target_function.__name__))
+    print(("Target function's nickname is", target_function.__name__))
     return 10 * value
 
 

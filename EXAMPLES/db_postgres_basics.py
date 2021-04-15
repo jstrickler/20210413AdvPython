@@ -9,7 +9,7 @@ pg_conn = psycopg2.connect(
 )
 pg_cursor = pg_conn.cursor()
 
-# select first name, last name from all presidents
+# select first nickname, last nickname from all presidents
 pg_cursor.execute('''
     select firstname, lastname from presidents order by termnum
 ''')

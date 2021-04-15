@@ -15,7 +15,7 @@ def row_as_dict(cursor):
         yield row_dict
 
 
-# select first name, last name from all presidents
+# select first nickname, last nickname from all presidents
 num_recs = c.execute('''
     select lastname, firstname
     from presidents

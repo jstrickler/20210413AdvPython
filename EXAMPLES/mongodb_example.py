@@ -77,9 +77,9 @@ animals = db.animals
 
 print(animals, '\n')
 
-animals.insert_one({'name': 'wombat', 'country': 'Australia'})
-animals.insert_one({'name': 'ocelot', 'country': 'Mexico'})
-animals.insert_one({'name': 'honey badger', 'country': 'Iran'})
+animals.insert_one({'nickname': 'wombat', 'country': 'Australia'})
+animals.insert_one({'nickname': 'ocelot', 'country': 'Mexico'})
+animals.insert_one({'nickname': 'honey badger', 'country': 'Iran'})
 
 for doc in animals.find():
-    print(doc['name'])
+    print(doc['nickname'])

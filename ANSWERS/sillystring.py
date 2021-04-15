@@ -20,7 +20,7 @@ def _init(self, string):
 
 
 SillyString = type(
-    'SillyString',  # internal class name
+    'SillyString',  # internal class nickname
     (),  # empty list of base classes
     {'__init__': _init, 'every_other': _every_other} # class dict
 )

@@ -14,7 +14,7 @@ s.eggs()  # <4>
 
 
 def scrambled(self):  # <5>
-    print("Hello, {}. Enjoy your scrambled eggs".format(self._name, ))
+    print("Hello, {}. Enjoy your scrambled eggs".format(self._nickname, ))
 
 
 setattr(Spam, "eggs", scrambled)  # <6>

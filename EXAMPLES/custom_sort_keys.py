@@ -44,7 +44,7 @@ def by_length_then_name(item):
     return len(item), item.lower() # <4>
 
 fs2 = sorted(fruit, key=by_length_then_name)
-print("By length, then name:")
+print("By length, then nickname:")
 print(" ".join(fs2))
 print()
 

@@ -2,7 +2,7 @@ x = 5
 #  1. determine type of argument
 #  2. create object of type int
 #  3. assign value 5 to int
-#  4. "bind" name "x" to that object
+#  4. "bind" nickname "x" to that object
 
 # every object has
 # -- type

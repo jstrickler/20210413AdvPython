@@ -20,7 +20,7 @@ def ham():
 def _toast():
     print("   ...and _toast()")
 
-print("my name is", __name__)
+print("my nickname is", __name__)
 
 if __name__ == '__main__':  # if NOT imported
     main()

@@ -11,7 +11,7 @@ conn = pymssql.connect(
 
 cursor = conn.cursor()
 
-# select first name, last name from all presidents
+# select first nickname, last nickname from all presidents
 row_count = cursor.execute('''
     select lname, fname
     from presidents

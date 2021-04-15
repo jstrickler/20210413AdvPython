@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-pres_lname = input("Enter president's last name: ")
+pres_lname = input("Enter president's last nickname: ")
 
 with open("../DATA/presidents.txt") as PRES:
     for rec in PRES:

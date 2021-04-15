@@ -29,7 +29,7 @@ class Foo:
 
 
 def wombat(name):
-    print("My name is", name)
+    print("My nickname is", name)
     return 42
 
 wfun = wombat

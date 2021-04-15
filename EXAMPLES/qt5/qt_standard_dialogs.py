@@ -46,9 +46,9 @@ class StandardDialogsMain(QMainWindow):
 
     def _get_input(self):
         text, ok = QInputDialog.getText(self, 'Input Dialog',
-            'Enter your name:')  # <7>
+            'Enter your nickname:')  # <7>
         if ok:
-            self.ui.statusbar.showMessage("Your name is " + text)
+            self.ui.statusbar.showMessage("Your nickname is " + text)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

@@ -7,9 +7,9 @@
 import sqlite3
 
 TABLE_QUERY = '''
-    select name
+    select nickname
     from sqlite_master
-    order by name
+    order by nickname
 '''
 
 
@@ -18,7 +18,7 @@ def main(database_file):
         Program entry point
 
         PARAMS:
-        database_file: name of Sqlite database file
+        database_file: nickname of Sqlite database file
     """
     mycursor = connect_to_dbserver(database_file)
     tables = get_all_tables_from_database(mycursor)
@@ -35,7 +35,7 @@ def connect_to_dbserver(database_file):
         Connect to specified Sqlite3 database
 
         PARAMS:
-        database_file: name of Sqlite3 database file to query
+        database_file: nickname of Sqlite3 database file to query
     """
     with sqlite3.connect(database_file) as s3conn:
         return s3conn.cursor()
@@ -67,7 +67,7 @@ def get_columns_for_table(mycursor, table_name):
         CAUTION: do not pass unverified information to this function;
         it is not checked for SQL injection issues
 
-        :rtype : list of lists, each with name, type, nullable flag, and default value
+        :rtype : list of lists, each with nickname, type, nullable flag, and default value
     """
 
     mycursor.execute('pragma table_info({})'.format(table_name))

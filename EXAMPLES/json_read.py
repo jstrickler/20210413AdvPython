@@ -12,13 +12,13 @@ with open('../DATA/solar.json') as solar_in:  # <1>
 
 print(solar['innerplanets'])  # <3>
 print('*' * 60)
-print(solar['innerplanets'][0]['name'])
+print(solar['innerplanets'][0]['nickname'])
 print('*' * 60)
 for planet in solar['innerplanets'] + solar['outerplanets']:
-    print(planet['name'])
+    print(planet['nickname'])
 
 print("*" * 60)
 for group in solar:
     if group.endswith('planets'):
         for planet in solar[group]:
-            print(planet['name'])
+            print(planet['nickname'])

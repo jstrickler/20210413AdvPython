@@ -14,7 +14,7 @@ NAME_QUERY = '''
 
 cur = s3conn.cursor()
 
-# select first name, last name from all presidents
+# select first nickname, last nickname from all presidents
 cur.execute(NAME_QUERY)
 
 for row in cur.fetchall():
@@ -26,7 +26,7 @@ dcur = s3conn.cursor()  # <1>
 # make _this_ cursor a dictionary cursor
 dcur.row_factory = sqlite3.Row  # <2>
 
-# select first name, last name from all presidents
+# select first nickname, last nickname from all presidents
 dcur.execute(NAME_QUERY)
 
 for row in dcur.fetchall():

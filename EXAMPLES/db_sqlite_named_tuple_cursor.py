@@ -8,7 +8,7 @@ def named_tuple_cursor(cursor):
     '''Generate rows as named tuples'''
     column_names = [desc[0] for desc in cursor.description]
     name_str = ' '.join(column_names)
-    # "row_tuple" is an arbitrary name -- any name could be used here
+    # "row_tuple" is an arbitrary nickname -- any nickname could be used here
     row_tuple = namedtuple('row_tuple', name_str)
 
     for cursor_row in cursor.fetchall():
@@ -19,7 +19,7 @@ def named_tuple_cursor(cursor):
 with sqlite3.connect("../DATA/presidents.db") as s3conn:
     c = s3conn.cursor()
 
-    # select first name, last name from all presidents
+    # select first nickname, last nickname from all presidents
     num_recs = c.execute('''
         select firstname, lastname
         from presidents

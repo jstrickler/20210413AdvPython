@@ -91,5 +91,5 @@ class Ui_Events(object):
         self.menuFile.setTitle(_translate("Events", "File"))
         self.menuEdit.setTitle(_translate("Events", "Edit"))
         self.actionQuit.setText(_translate("Events", "Quit"))
-        self.actionClear_name_field.setText(_translate("Events", "Clear name field"))
+        self.actionClear_name_field.setText(_translate("Events", "Clear nickname field"))
 

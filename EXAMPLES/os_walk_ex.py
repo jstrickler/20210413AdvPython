@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""print size of every python file whose name starts with "m" """
+"""print size of every python file whose nickname starts with "m" """
 
 import os
 

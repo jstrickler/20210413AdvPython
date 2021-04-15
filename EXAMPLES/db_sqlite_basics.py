@@ -6,7 +6,7 @@ with sqlite3.connect("../DATA/presidents.db") as s3conn:  # <1>
 
     s3cursor = s3conn.cursor()  # <2>
 
-    # select first name, last name from all presidents
+    # select first nickname, last nickname from all presidents
     s3cursor.execute('''
         select firstname, lastname
         from presidents

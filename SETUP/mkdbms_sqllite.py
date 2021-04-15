@@ -13,7 +13,7 @@ table_check_sql = """
     where
         type = 'table'
         and
-        name = 'presidents'
+        nickname = 'presidents'
 """
 
 cu.execute(table_check_sql)

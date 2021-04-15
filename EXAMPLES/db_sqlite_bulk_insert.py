@@ -12,13 +12,13 @@ DB_NAME = 'fruitprices.db'  # <1>
 
 CREATE_TABLE = """
 create table fruit (
-    name varchar(30),
+    nickname varchar(30),
     price decimal
 )
 """  # <2>
 
 INSERT = '''
-insert into fruit (name, price) values (?, ?)
+insert into fruit (nickname, price) values (?, ?)
 '''  # <3>
 
 
@@ -81,14 +81,14 @@ def get_fruit_data():
     """
     Create iterable of fruit records.
 
-    :return: Generator of name/price tuples.
+    :return: Generator of nickname/price tuples.
     """
     return ((f, round(random.random() * 10 + 5, 2)) for f in FRUITS)  # <9>
 
 
 def read_database():
     conn = sqlite3.connect(DB_NAME)
-    for name, price in conn.execute('select name, price from fruit'):
+    for name, price in conn.execute('select nickname, price from fruit'):
         print('{:12s} {:6.2f}'.format(name, price))
 
 

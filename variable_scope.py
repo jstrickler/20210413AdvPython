@@ -17,7 +17,7 @@ def beta():
         # global a  # DON'T DO THIS!
         a = 'Alice'
         print("in gamma(): a is", a)
-        print("in gamma(): name is", name)
+        print("in gamma(): nickname is", name)
 
     return gamma
 

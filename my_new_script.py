@@ -38,4 +38,4 @@ def function1():
     pass
 
 if __name__ == '__main__':
-    main(sys.argv[1:])  # Pass command line args (minus script name) to main()
+    main(sys.argv[1:])  # Pass command line args (minus script nickname) to main()

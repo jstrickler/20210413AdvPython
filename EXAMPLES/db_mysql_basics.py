@@ -13,7 +13,7 @@ with closing(
 ) as myconn:
     mycursor = myconn.cursor()
 
-    # select first name, last name from all presidents
+    # select first nickname, last nickname from all presidents
     row_count = mycursor.execute('''
         select firstname, lastname
         from presidents

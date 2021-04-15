@@ -13,7 +13,7 @@ print("Our star is {}\n".format(star))
 
 for section in PLANET_SECTIONS:
     for planet in solar_data[section]:
-        print(planet['name'])
+        print(planet['nickname'])
         for moon in planet['moons']:
             print("\t{}".format(moon))
 

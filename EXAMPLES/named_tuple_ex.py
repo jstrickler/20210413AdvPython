@@ -7,7 +7,7 @@ Created on Thu Mar 14 09:07:57 2013
 """
 from collections import namedtuple
 
-Knight = namedtuple('Knight', 'name title color quest comment') # <1>
+Knight = namedtuple('Knight', 'nickname title color quest comment') # <1>
 
 k = Knight('Bob', 'Sir', 'green', 'whirled peas', 'Who am i?') # <2>
 

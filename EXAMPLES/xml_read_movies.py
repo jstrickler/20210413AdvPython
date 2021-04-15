@@ -9,7 +9,7 @@ movies = movies_doc.getroot()  # <2>
 
 for movie in movies:  # <3>
     print('{} by {}'.format(
-        movie.get('name'),  # <4>
+        movie.get('nickname'),  # <4>
         movie.findtext('director'),  # <5>
     )
     )

@@ -12,7 +12,7 @@ with open('../DATA/mary.txt') as mary_in:  # <3>
 print()
 
 while True:  # <6>
-    name = input("What is your name? ")  # <7>
+    name = input("What is your nickname? ")  # <7>
     if name.lower() == 'q':
         break  # <8>
     print("Welcome,", name)
