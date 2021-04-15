@@ -13,6 +13,7 @@ with sqlite3.connect("../DATA/presidents.db") as s3conn:
 
     for party in 'Federalist', 'Whig':
         print(party)
+        # .....executemany(query, list_of_lists)
         s3cursor.execute(party_query, (party,))  # <2>
         print(s3cursor.fetchall())
         print()

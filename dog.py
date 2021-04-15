@@ -3,11 +3,18 @@
 class Dog:
 
     def __init__(self, name):
-        self._nickname = name
+        self.nickname = name
 
     @property
     def nickname(self):
         return self._nickname
+
+    @nickname.setter
+    def nickname(self, name):
+        if isinstance(name, str):
+            self._nickname = name
+        else:
+            raise TypeError("Nickname must be a string")
 
     def bark(self):
         print("woof woof")
