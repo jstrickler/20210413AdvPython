@@ -5,7 +5,7 @@ from unittest.mock import Mock
 
 ham = Mock()  # <1>
 
-
+# ------ from spam.py ------------------------
 # system under test
 class Spam():  # <2>
     def __init__(self, param):
@@ -14,6 +14,7 @@ class Spam():  # <2>
     @property
     def value(self):  # <4>
         return self._value
+# --------------------------------------------
 
 # dependency to be mocked -- not used in test
 # def ham(n):
