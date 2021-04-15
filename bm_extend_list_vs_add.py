@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import timeit
+from timeit import Timer
 
 setup_code = """
 data = list(range(100000000))
@@ -7,8 +7,6 @@ list1 = list(data)
 list2 = list(data)
 list3 = list(data)
 """
-
-  # should BENCHMARK this!
 
 codes = [
     '''new_list = list1 + list2 + list3''',
@@ -21,7 +19,7 @@ for x in list1, list2, list3:
 ]
 
 for code in codes:
-    t = timeit.Timer(code, setup_code)
+    t = Timer(code, setup_code)
     print(code, '\n')
     print(t.timeit(10))
     print()

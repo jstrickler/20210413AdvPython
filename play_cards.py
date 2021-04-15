@@ -1,87 +1,100 @@
+"""
+Play a game of cards.
 
+Uses the CardDeck and JokerDeck classes.
+
+No strategy implemented (yet).
+"""
 from carddeck import CardDeck
 from jokerdeck import JokerDeck
 
-print(CardDeck)
-d1 = CardDeck('Matilda')
-print(type(d1))
+def main():
+    """
+    Program entry point
 
-# print(d1._dealer)  # DO NOT DO THIS
+    :return: None
+    """
+    print(CardDeck)
+    card_deck_1 = CardDeck('Matilda')
+    print(type(card_deck_1))
 
-# print(d1.get_dealer())
-#
-# x = CardDeck.get_dealer(d1)
-#
-# d1.set_dealer("Ferdinand")
+    # print(card_deck_1._dealer)  # DO NOT DO THIS
 
-print(d1.dealer) # calls property method
-d1.dealer = "Alice"
+    # print(card_deck_1.get_dealer())
+    #
+    # x = CardDeck.get_dealer(card_deck_1)
+    #
+    # card_deck_1.set_dealer("Ferdinand")
 
-print(d1.dealer)
+    print(card_deck_1.dealer) # calls property method
+    card_deck_1.dealer = "Alice"
 
-# INSTANCE.method(p1, p2, ...)
-# becomes
-# CLASS.method(INSTANCE, p1, p2...)
-d2 = CardDeck('Ellen')
-# print(d2.get_dealer())
-print(d2.dealer)
-d2.dealer = 'Lex Luthor'
+    print(card_deck_1.dealer)
 
-try:
-    d2.dealer = 12.2343
-except TypeError as err:
-    print(err)
-else:
-    print(d2)
+    # INSTANCE.method(p1, p2, ...)
+    # becomes
+    # CLASS.method(INSTANCE, p1, p2...)
+    card_deck_2 = CardDeck('Ellen')
+    # print(card_deck_2.get_dealer())
+    print(card_deck_2.dealer)
+    card_deck_2.dealer = 'Lex Luthor'
 
-try:
-    d3 = CardDeck(8.9)
-except TypeError as err:
-    print(err)
-else:
-    print(d3)
-    print(d3.dealer)
+    try:
+        card_deck_2.dealer = 12.2343
+    except TypeError as err:
+        print(err)
+    else:
+        print(card_deck_2)
 
-print(CardDeck.SUITS[0])
-print(d1.SUITS[0])
+    try:
+        card_deck_3 = CardDeck(8.9)
+    except TypeError as err:
+        print(err)
+    else:
+        print(card_deck_3)
+        print(card_deck_3.dealer)
 
-d1.shuffle()
-print(d1.cards, '\n')
-d2.shuffle()
+    print(CardDeck.SUITS[0])
+    print(card_deck_1.SUITS[0])
 
-for i in range(5):
-    card = d1.draw()
-    print(card.rank, card.suit)
-print()
+    card_deck_1.shuffle()
+    print(card_deck_1.cards, '\n')
+    card_deck_2.shuffle()
 
-suits = d1.get_suits()
-print(suits)
+    for _ in range(5):
+        card = card_deck_1.draw()
+        print(card.rank, card.suit)
+    print()
 
-print(CardDeck.get_suits())
+    suits = card_deck_1.get_suits()
+    print(suits)
 
-CardDeck.bark()
-d1.bark()
+    print(CardDeck.get_suits())
 
-j1 = JokerDeck("Jerry")
-print(j1)
-j1.shuffle()
-print(j1.cards)
+    CardDeck.bark()
+    card_deck_1.bark()
 
-print(CardDeck.mro())
-print(JokerDeck.mro())
+    joker_deck_1 = JokerDeck("Jerry")
+    print(joker_deck_1)
+    joker_deck_1.shuffle()
+    print(joker_deck_1.cards)
 
-print(len(d1))
-print(len(j1))
-print(d1)
-print(d2)
-print(j1)
-print(repr(j1))
+    print(CardDeck.mro())
+    print(JokerDeck.mro())
 
-j1.how_to_play()
-print(JokerDeck.mro())
+    print(len(card_deck_1))
+    print(len(joker_deck_1))
+    print(card_deck_1)
+    print(card_deck_2)
+    print(joker_deck_1)
+    print(repr(joker_deck_1))
 
-result = d1 + j1
-print(result)
+    joker_deck_1.how_to_play()
+    print(JokerDeck.mro())
 
+    result = card_deck_1 + joker_deck_1
+    print(result)
 
+if __name__ == '__main__':
+    main()
 
