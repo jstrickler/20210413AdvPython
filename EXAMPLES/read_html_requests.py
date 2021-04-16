@@ -8,6 +8,9 @@ for header, value in sorted(response.headers.items()): # <2>
     print(header, value)
 print()
 
-print(response.content[:200].decode())   # <3>
+# response.content raw content (bytes)
+# response.text    (str)
+
+print(response.text[:200])   # <3>
 print('...')
-print(response.content[-200:].decode())   # <4>
+print(response.text[-200:])   # <4>

@@ -14,6 +14,11 @@ def main(args):
     response = requests.get(
         BASE_URL + args[0],
         params={'key': API_KEY},
+        headers={'hk': 'hv', 'hk': 'hv'},
+        proxies={'http': 'the proxy...', },
+        data={'name': 'Bob', 'animal': 'wombat'},
+        # cert={...}
+        # params={'id': 12, 'color': 'red'},
     )  # <3>
 
     if response.status_code == requests.codes.OK:
