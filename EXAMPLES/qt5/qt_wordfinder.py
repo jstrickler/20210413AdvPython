@@ -24,7 +24,7 @@ class WordFinderMain(QMainWindow):
         # self.ui.lePattern.textChanged.connect(self._search)
 
         self.ui.btSearch.clicked.connect(self._search)
-±jang
+
     def _load_file(self):
         file_name, _ = QFileDialog.getOpenFileName(
             self, 'Open file for matching', '.'

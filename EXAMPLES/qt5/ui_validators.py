@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'validators.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -71,6 +71,7 @@ class Ui_Validators(object):
         _translate = QtCore.QCoreApplication.translate
         Validators.setWindowTitle(_translate("Validators", "MainWindow"))
         self.lab_alphanum.setText(_translate("Validators", "Alphanumeric"))
+        self.le_alphanum.setToolTip(_translate("Validators", "A-Z a-z 0-9 only"))
         self.lab_letters_space.setText(_translate("Validators", "Lower case letters and spaces"))
         self.lab_nums_1_100.setText(_translate("Validators", "Numbers 1 to 100"))
         self.lab_float.setText(_translate("Validators", "Floating point"))

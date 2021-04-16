@@ -22,7 +22,7 @@ class StatusBarMain(QMainWindow):
     def _update_statusbar(self):
         self._count += 1
         msg = "Count is " + str(self._count)
-        self.ui.statusbar.showMessage(msg, 0) # <2>
+        self.ui.statusbar.showMessage(msg, 1000) # <2>
 
 
 if __name__ == '__main__':

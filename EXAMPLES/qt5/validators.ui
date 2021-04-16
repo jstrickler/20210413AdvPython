@@ -35,7 +35,11 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="le_alphanum"/>
+      <widget class="QLineEdit" name="le_alphanum">
+       <property name="toolTip">
+        <string>A-Z a-z 0-9 only</string>
+       </property>
+      </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="lab_letters_space">
