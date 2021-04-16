@@ -14,4 +14,5 @@ with open('../TEMP/stuff.csv', 'w') as stuff_in:
     else:
         wtr = csv.writer(stuff_in) # <1>
     for row in data:
+        #            iterable
         wtr.writerow(row) # <2>
