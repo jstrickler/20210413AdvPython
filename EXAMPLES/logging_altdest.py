@@ -3,7 +3,7 @@ import sys
 import logging
 import logging.handlers
 
-logger = logging.getLogger('ThisApplication')  # <1>
+logger = logging.getLogger(__name__)  # <1>
 logger.setLevel(logging.DEBUG)  # <2>
 
 if sys.platform == 'win32':
@@ -13,13 +13,16 @@ else:
     syslog_handler = logging.handlers.SysLogHandler()  # <5>
     logger.addHandler(syslog_handler)  # <6>
 
+import getpass
+smtp_passwd = getpass.getpass("password? ")
+
 # note -- use your own SMTP server...
 email_handler = logging.handlers.SMTPHandler(
-    ('smtpcorp.com', 8025),
+    ('smtp2go.com', 2525),
     'LOGGER@pythonclass.com',
     ['jstrick@mindspring.com'],
     'ThisApplication Log Entry',
-    ('jstrickpython', 'python(monty)'),
+    ('pythonclass', smtp_passwd),
 )  # <7>
 
 logger.addHandler(email_handler)  # <8>

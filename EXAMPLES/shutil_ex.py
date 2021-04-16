@@ -17,11 +17,14 @@ os.mkdir(new_folder) # <3>
 shutil.move('fred.txt', new_folder)
 
 shutil.make_archive(new_folder, 'zip', new_folder) # <4>
+shutil.make_archive(new_folder, 'tar', new_folder) # <4>
+shutil.make_archive(new_folder, 'gztar', new_folder) # <4>
+shutil.make_archive(new_folder, 'bztar', new_folder) # <4>
 
 print("{}.zip exists:".format(new_folder), os.path.exists(new_folder + '.zip'))
 
 print("{} exists:".format(new_folder), os.path.exists(new_folder))
 
-shutil.rmtree(new_folder) # <5>
+shutil.rmtree(new_folder) # <5>  # unix: rm -rf   windows:  rmdir /s
 
 print("{} exists:".format(new_folder), os.path.exists(new_folder))
