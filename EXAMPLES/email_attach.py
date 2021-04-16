@@ -41,7 +41,7 @@ def create_message(sender, recipients, subject, body):
 def add_text_attachment(file_name, message):
     with open(file_name) as file_in:  # <7>
         attachment_data = file_in.read()
-    message.add_attachment(attachment_data)  # <8>
+    message.add_attachment(attachment_data, maintype='text', subtype='plain')  # <8>
 
 
 def add_image_attachment(file_name, message):
